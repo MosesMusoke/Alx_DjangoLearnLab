@@ -9,7 +9,7 @@ from rest_framework import status, permissions
 from django.shortcuts import get_object_or_404
 from .models import CustomUser
 
-class RegisterView(generics.CreateAPIView):
+class RegisterView(generics.GenericAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = RegisterSerializer
 
